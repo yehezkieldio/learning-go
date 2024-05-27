@@ -7,6 +7,8 @@ import (
 	"reflect"
 )
 
+// The term marshalling in computer science refers to the process of transforming the memory representation of an object to a data format suitable for storage or transmission.
+
 // Data marshalling is the process of converting data from one format to another.
 // In Go, the encoding/json package provides support for marshalling and unmarshalling data to and from JSON.
 
