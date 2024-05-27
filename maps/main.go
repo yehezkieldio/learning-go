@@ -10,8 +10,9 @@ import "fmt"
 
 func main() {
 	// chicken is a map with string keys and int values
-	// make in go is used to create a map or a slice
-	// in-general, make is used to create a data structure
+	// make in go is used to initialize a map, slice or channel which are dynamic data structures
+	// the formula for make is:
+	// make(map[keyType]valueType)
 	chicken := make(map[string]int)
 
 	chicken["age"] = 2
