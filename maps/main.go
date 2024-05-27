@@ -9,9 +9,10 @@ import "fmt"
 
 
 func main() {
-	var chicken map[string]int
 	// chicken is a map with string keys and int values
-	chicken = map[string]int{}
+	// make in go is used to create a map or a slice
+	// in-general, make is used to create a data structure
+	chicken := make(map[string]int)
 
 	chicken["age"] = 2
 	chicken["weight"] = 5
