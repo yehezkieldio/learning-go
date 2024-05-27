@@ -21,10 +21,12 @@ type Robot struct {
 	Model string
 }
 
+// The Speak method is implemented for the Robot type.
 func (r Robot) Speak() string {
 	return "Beep Boop!"
 }
 
+// This function works with any type that implements the Speaker interface.
 func introduceSpeaker(s Speaker) {
 	fmt.Println(s.Speak())
 }
