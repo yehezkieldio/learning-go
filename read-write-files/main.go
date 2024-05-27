@@ -35,6 +35,26 @@ func SaveBooks(filename string, books []Book) error {
 	return writer.Flush()
 }
 
+func LoadBooks(filename string) ([]Book, error) {
+	var books []Book
+	file, err := os.Open(filename)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		var book Book
+		if err := json.Unmarshal(scanner.Bytes(), &book); err != nil {
+			return nil, err
+		}
+		books = append(books, book)
+	}
+
+	return books, scanner.Err()
+}
+
 func main() {
 	books := []Book{
 		{"The Art of Computer Programming", "Donald Knuth", 3168},
@@ -47,4 +67,11 @@ func main() {
 		fmt.Println("Error:", err)
 		return
 	}
+
+	loadedBooks, err := LoadBooks(filename)
+	if err != nil {
+		fmt.Println("Error loading books:", err)
+		return
+	}
+	fmt.Println("Loaded books:", loadedBooks)
 }
