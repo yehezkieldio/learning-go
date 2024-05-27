@@ -1,0 +1,17 @@
+<Library>
+ <book>
+  <title>The Art of Computer Programming</title>
+  <author>Donald Knuth</author>
+  <pages>3168</pages>
+ </book>
+ <book>
+  <title>The Go Programming Language</title>
+  <author>Alan A. A. Donovan &amp; Brian W. Kernighan</author>
+  <pages>380</pages>
+ </book>
+ <book>
+  <title>Design Patterns: Elements of Reusable Object-Oriented Software</title>
+  <author>Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides</author>
+  <pages>395</pages>
+ </book>
+</Library>
